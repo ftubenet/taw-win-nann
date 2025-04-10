@@ -5,6 +5,19 @@ import Link from "next/link"
 import { Home, Newspaper, Wrench, Contact, Menu, X } from "lucide-react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
+import ContactDialog from "@/components/contact-dialog"
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog"
+import {
+  Phone,
+  MessageSquare,
+  Mail,
+  Facebook,
+  MessagesSquare,
+  MessageCircle,
+  Send,
+  MessageSquareDashed,
+  MessageSquareMore,
+} from "lucide-react"
 
 export default function MobileNav() {
   const [activeSection, setActiveSection] = useState("home")
@@ -121,11 +134,7 @@ export default function MobileNav() {
             </nav>
 
             <div className="mt-auto pt-8">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white" asChild>
-                <a href="#contact" onClick={() => handleLinkClick("contact")}>
-                  Get a Quote
-                </a>
-              </Button>
+              <ContactDialog />
 
               <div className="flex justify-center gap-4 mt-6">
                 <a
@@ -134,7 +143,7 @@ export default function MobileNav() {
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 >
-                  <Home className="h-5 w-5 text-primary" />
+                  <Facebook className="h-5 w-5 text-primary" />
                 </a>
                 <a
                   href="https://t.me/tawwinnann"
@@ -142,7 +151,7 @@ export default function MobileNav() {
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 >
-                  <Newspaper className="h-5 w-5 text-primary" />
+                  <Send className="h-5 w-5 text-primary" />
                 </a>
                 <a
                   href="viber://chat?number=%2B959123456789"
@@ -150,7 +159,7 @@ export default function MobileNav() {
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 >
-                  <Contact className="h-5 w-5 text-primary" />
+                  <MessageCircle className="h-5 w-5 text-primary" />
                 </a>
               </div>
             </div>
@@ -200,19 +209,79 @@ export default function MobileNav() {
             <Newspaper className="h-5 w-5" />
             <span className="text-xs mt-1">Blog</span>
           </Link>
-          <Link
-            href="#contact"
-            className={`flex flex-col items-center justify-center ${
-              activeSection === "contact" ? "text-primary" : "text-muted-foreground"
-            }`}
-            onClick={(e) => {
-              e.preventDefault()
-              handleLinkClick("contact")
-            }}
-          >
-            <Contact className="h-5 w-5" />
-            <span className="text-xs mt-1">Contact</span>
-          </Link>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                className={`flex flex-col items-center justify-center w-full h-full ${
+                  activeSection === "contact" ? "text-primary" : "text-muted-foreground"
+                }`}
+              >
+                <Contact className="h-5 w-5" />
+                <span className="text-xs mt-1">Contact</span>
+              </button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center">ဆက်သွယ်ရန် နည်းလမ်းများ</h3>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { name: "ဖုန်း", icon: <Phone className="h-6 w-6 text-primary mb-1" />, link: "tel:+959123456789" },
+                    {
+                      name: "SMS",
+                      icon: <MessageSquare className="h-6 w-6 text-primary mb-1" />,
+                      link: "sms:+959123456789",
+                    },
+                    {
+                      name: "အီးမေးလ်",
+                      icon: <Mail className="h-6 w-6 text-primary mb-1" />,
+                      link: "mailto:info@tawwinnann.com",
+                    },
+                    {
+                      name: "Facebook",
+                      icon: <Facebook className="h-6 w-6 text-primary mb-1" />,
+                      link: "https://facebook.com",
+                    },
+                    {
+                      name: "Messenger",
+                      icon: <MessagesSquare className="h-6 w-6 text-primary mb-1" />,
+                      link: "https://m.me/tawwinnann",
+                    },
+                    {
+                      name: "Viber",
+                      icon: <MessageCircle className="h-6 w-6 text-primary mb-1" />,
+                      link: "viber://chat?number=%2B959123456789",
+                    },
+                    {
+                      name: "Telegram",
+                      icon: <Send className="h-6 w-6 text-primary mb-1" />,
+                      link: "https://t.me/tawwinnann",
+                    },
+                    {
+                      name: "Line",
+                      icon: <MessageSquareDashed className="h-6 w-6 text-primary mb-1" />,
+                      link: "https://line.me/ti/p/~tawwinnann",
+                    },
+                    {
+                      name: "WeChat",
+                      icon: <MessageSquareMore className="h-6 w-6 text-primary mb-1" />,
+                      link: "weixin://dl/chat?tawwinnann",
+                    },
+                  ].map((option, index) => (
+                    <a
+                      key={index}
+                      href={option.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center justify-center p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
+                    >
+                      {option.icon}
+                      <span className="text-xs text-center">{option.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </>

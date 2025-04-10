@@ -22,6 +22,7 @@ import ProjectGallery from "@/components/project-gallery"
 import ServiceCard from "@/components/service-card"
 import MobileNav from "@/components/mobile-nav"
 import HeroSection from "@/components/hero-section"
+import { MessageSquare, MessagesSquare, MessageSquareDashed, MessageSquareMore } from "lucide-react"
 
 export default function LandingPage() {
   // Smooth scrolling for anchor links
@@ -64,7 +65,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Leaf className="h-6 w-6 text-primary" />
-            <span className="text-xl font-heading">Taw Win Nann</span>
+            <span className="text-xl font-heading">တော်ဝင်နန်း</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary">
@@ -99,42 +100,41 @@ export default function LandingPage() {
         <section id="services" className="py-16 bg-accent/5">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-2">Our Services</h2>
+              <h2 className="text-3xl font-bold mb-4">ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                We provide professional electronics and solar installation services for hotels, residential buildings,
-                and private homes.
+                ဟိုတယ်များ၊ လူနေအဆောက်အအုံများနှင့် ပုဂ္ဂလိကနေအိမ်များအတွက် ပရော်ဖက်ရှင်နယ် အီလက်ထရွန်းနစ်နှင့် ဆိုလာ တပ်ဆင်ရေး ဝန်ဆောင်မှုများ ပြုလုပ်ပေးပါသည်
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ServiceCard
                 icon={<Leaf className="h-10 w-10 text-primary" />}
-                title="Solar Panel Installation"
-                description="Professional installation of solar panels for residential and commercial buildings."
+                title="ဆိုလာ ပန်နယ်လ် တပ်ဆင်ခြင်း"
+                description="လူနေအိမ်များနှင့် စီးပွားရေးအဆောက်အအုံများအတွက် ပရော်ဖက်ရှင်နယ် နေစွမ်းအင်ပြား တပ်ဆင်ပေးခြင်း။"
               />
               <ServiceCard
                 icon={<Zap className="h-10 w-10 text-primary" />}
-                title="Electrical Systems"
-                description="Complete electrical system design and installation for new and existing buildings."
+                title="လျှပ်စစ်စနစ်များ"
+                description="အသစ်နှင့် ရှိပြီးသား အဆောက်အအုံများအတွက် လျှပ်စစ်စနစ် ဒီဇိုင်းရေးဆွဲခြင်းနှင့် တပ်ဆင်ခြင်း အပြည့်အစုံ။"
               />
               <ServiceCard
                 icon={<Lightbulb className="h-10 w-10 text-primary" />}
                 title="Smart Lighting"
-                description="Energy-efficient smart lighting solutions for homes and businesses."
+                description="နေအိမ်များနှင့် စီးပွားရေးလုပ်ငန်းများအတွက် စွမ်းအင်ချွေတာသော smart lighting ဖြေရှင်းချက်များ။"
               />
               <ServiceCard
                 icon={<Wifi className="h-10 w-10 text-primary" />}
-                title="Home Automation"
-                description="Smart home systems for controlling lighting, security, and appliances."
+                title="အိမ်သုံးဆက်သွယ်မှုစနစ်"
+                description="လုံခြုံရေး နှင့် အသုံးအဆောင်ပစ္စည်းများကို ထိန်းချုပ်နိုင်သော စနစ်များ"
               />
               <ServiceCard
                 icon={<Battery className="h-10 w-10 text-primary" />}
-                title="Battery Storage"
-                description="Energy storage solutions to maximize your solar power investment."
+                title="ဘက်ထရီသိုလှောင်မှု"
+                description="ဘတ်ထရီ သိုလှောင်မှု သိမ်းဆည်းမှု နည်းစနစ်။"
               />
               <ServiceCard
                 icon={<Shield className="h-10 w-10 text-primary" />}
-                title="Maintenance & Repair"
-                description="Regular maintenance and emergency repair services for all installations."
+                title="ထိမ်းသိမ်းခြင်းနှင့် ပြုပြင်ခြင်း"
+                description="တပ်ဆင်ထားသော ဆားဗစ်များအား ပုံမှန် ထိမ်းသိမ်းခြင်းနှင့် အရေးပေါ် ပြုပြင်ခြင်းများ"
               />
             </div>
           </div>
@@ -144,9 +144,9 @@ export default function LandingPage() {
         <section id="projects" className="py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-2">Our Projects</h2>
+              <h2 className="text-3xl font-bold mb-2">ကျွန်ုပ်တို့၏ အကောင်အထည်ဖော်မှုများ</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Take a look at some of our recent installations for hotels, residential buildings, and private homes.
+                ဟိုတယ်၊ နေအိမ်အဆောက်အဦးများ နှင့် သီးသန့်နေအိမ်များအတွက်ကျွန်ုပ်တို့၏ မကြာသေးမီက စီမံကိန်းများကို လေ့လာကြည့်ပါ။
               </p>
             </div>
             <ProjectGallery />
@@ -157,9 +157,9 @@ export default function LandingPage() {
         <section id="blog" className="py-16 bg-accent/5">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+              <h2 className="text-3xl font-bold mb-2">လေ့လာရန်</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Stay updated with the latest trends and news in solar energy and electronics.
+                နောက်ဆုံးရ ဆိုလာစွမ်းအင် ဗဟုသုတနှင့် အီလက်ထရွန်းနစ် သတင်းများလေ့လာရန်
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -179,10 +179,11 @@ export default function LandingPage() {
                   <div className="p-6">
                     <time className="text-sm text-muted-foreground">March 15, 2025</time>
                     <h3 className="mt-2 text-xl font-semibold leading-none tracking-tight">
-                      The Benefits of Solar Energy for Your Home
+                      သင့်အိမ်အတွက် နေစွမ်းအင်၏ အကျိုးကျေးဇူးများ
                     </h3>
                     <p className="mt-2 line-clamp-3 text-muted-foreground">
-                      Learn how solar energy can reduce your electricity bills and help the environment.
+                      နေစွမ်းအင်က လျှပ်စစ်ဖိုးသက်သာစေပြီး သဘာဝပတ်ဝန်းကျင်ကို ထိန်းသိမ်းပေးပါတယ်။ ရေရှည်တည်တံ့တဲ့ စွမ်းအင်ရွေးချယ်မှုနဲ့ သင့်အိမ်ကို စိမ်းလန်းစွာ
+                      ထွန်းလင်းလိုက်ပါ။
                     </p>
                     <Button variant="link" className="mt-4 p-0 h-auto font-medium flex items-center gap-1 text-primary">
                       Read More <ChevronRight className="h-4 w-4" />
@@ -203,134 +204,117 @@ export default function LandingPage() {
         <section id="contact" className="py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-2">Contact Us</h2>
+              <h2 className="text-3xl font-bold mb-2">ဆက်သွယ်ရန်</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Get in touch with us for inquiries, quotes, or to discuss your project needs.
+                စုံစမ်းမေးမြန်းရန်၊ ဈေးနှုန်းများ သိရှိလိုပါက သို့မဟုတ် သင့်စီမံကိန်းလိုအပ်ချက်များကို ဆွေးနွေးရန် ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ။
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="gradient-border bg-card rounded-lg shadow-sm p-6">
-                <h3 className="text-xl font-semibold mb-4">Send Us a Message</h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Your name"
-                      />
+            <div className="gradient-border bg-card rounded-lg shadow-sm p-6 max-w-3xl mx-auto">
+              <h3 className="text-xl font-semibold mb-6 text-center">ကျွန်ုပ်တို့နှင့် ဆက်သွယ်ပါ</h3>
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a
+                    href="tel:+959123456789"
+                    className="flex items-center gap-3 p-4 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Phone className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Your email"
-                      />
+                    <div>
+                      <h4 className="font-medium">ဖုန်း</h4>
+                      <p className="text-sm text-muted-foreground">+95 9 123 456 789</p>
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
-                    </label>
-                    <input
-                      id="subject"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Subject"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Your message"
-                    />
-                  </div>
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
-                    Send Message
-                  </Button>
-                </form>
-              </div>
-              <div className="gradient-border bg-card rounded-lg shadow-sm p-6">
-                <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  </a>
+                  <a
+                    href="mailto:info@tawwinnann.com"
+                    className="flex items-center gap-3 p-4 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium">အီးမေးလ်</h4>
+                      <p className="text-sm text-muted-foreground">info@tawwinnann.com</p>
+                    </div>
+                  </a>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="font-medium text-center">ဆိုရှယ်မီဒီယာ</h4>
+                  <div className="flex flex-wrap justify-center gap-4">
                     <a
-                      href="tel:+959123456789"
-                      className="flex items-center gap-3 p-4 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                        <Phone className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium">Phone</h4>
-                        <p className="text-sm text-muted-foreground">+95 9 123 456 789</p>
-                      </div>
+                      <Facebook className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">Facebook</span>
                     </a>
                     <a
-                      href="mailto:info@tawwinnann.com"
-                      className="flex items-center gap-3 p-4 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
+                      href="https://t.me/tawwinnann"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                        <Mail className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium">Email</h4>
-                        <p className="text-sm text-muted-foreground">info@tawwinnann.com</p>
-                      </div>
+                      <Send className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">Telegram</span>
+                    </a>
+                    <a
+                      href="viber://chat?number=%2B959123456789"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
+                    >
+                      <MessageCircle className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">Viber</span>
+                    </a>
+                    <a
+                      href="sms:+959123456789"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
+                    >
+                      <MessageSquare className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">SMS</span>
+                    </a>
+                    <a
+                      href="https://m.me/tawwinnann"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
+                    >
+                      <MessagesSquare className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">Messenger</span>
+                    </a>
+                    <a
+                      href="https://line.me/ti/p/~tawwinnann"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
+                    >
+                      <MessageSquareDashed className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">Line</span>
+                    </a>
+                    <a
+                      href="weixin://dl/chat?tawwinnann"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors p-2"
+                    >
+                      <MessageSquareMore className="h-6 w-6 text-primary mb-1" />
+                      <span className="text-xs">WeChat</span>
                     </a>
                   </div>
-                  <div className="space-y-4">
-                    <h4 className="font-medium">Social Media</h4>
-                    <div className="flex flex-wrap gap-4">
-                      <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                      >
-                        <Facebook className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Facebook</span>
-                      </a>
-                      <a
-                        href="https://t.me/tawwinnann"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                      >
-                        <Send className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Telegram</span>
-                      </a>
-                      <a
-                        href="viber://chat?number=%2B959123456789"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                      >
-                        <MessageCircle className="h-6 w-6 text-primary" />
-                        <span className="sr-only">Viber</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-2">Location</h4>
-                    <p className="text-muted-foreground">123 Main Street, Yangon, Myanmar</p>
-                    <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg gradient-border bg-muted">
-                      <img
-                        src="/placeholder.svg?height=200&width=400&text=Map"
-                        alt="Office location map"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
+                </div>
+                <div>
+                  <h4 className="font-medium mb-2 text-center">တည်နေရာ</h4>
+                  <p className="text-muted-foreground text-center">123 Main Street, Yangon, Myanmar</p>
+                  <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg gradient-border bg-muted">
+                    <img
+                      src="/placeholder.svg?height=200&width=400&text=Map"
+                      alt="Office location map"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                 </div>
               </div>

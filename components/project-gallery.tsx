@@ -10,34 +10,34 @@ export default function ProjectGallery() {
 
   const projects = [
     {
-      title: "Hotel Solar Installation",
-      description: "Complete solar panel installation for a 5-star hotel in Yangon.",
-      image: "/placeholder.svg?height=400&width=600&text=Hotel+Project",
+      title: "ဟိုတယ် ဆိုလာ တပ်ဆင်ခြင်း",
+      description: "အင်းလေးဒေသ ရှိ ဟိုတယ်တစ်ခုတွင် ဆိုလာစွမ်းအင် တပ်ဆင်ပေးခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/Hotelsolor.png",
     },
     {
-      title: "Residential Building Electrical System",
-      description: "Full electrical system design and installation for a new residential building.",
-      image: "/placeholder.svg?height=400&width=600&text=Residential+Project",
+      title: "နေအိမ်အဆောက်အဦး လျှပ်စစ်စနစ်",
+      description: "တည်ဆောက်လက်စ နေအိမ်တစ်လုံးတွင် လျှပ်စစ်စနစ် တပ်ဆင်နေခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/resdi.png",
     },
     {
       title: "Smart Home Automation",
-      description: "Smart home system installation for a private residence.",
-      image: "/placeholder.svg?height=400&width=600&text=Smart+Home+Project",
+      description: "သီးသန့် နေအိမ်တစ်လုံးမှာ smart home automation sytem တပ်ဆင်နေခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/smarthomeauto.png",
     },
     {
-      title: "Commercial Solar Project",
-      description: "Large-scale solar installation for a commercial complex.",
-      image: "/placeholder.svg?height=400&width=600&text=Commercial+Project",
+      title: "ဆိုလာ ပရောဂျက်များ",
+      description: "လုပ်ငန်းသုံး ဆိုလာ ပရောဂျက်များ တပ်ဆင်နေခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/largescal.png",
     },
     {
-      title: "Luxury Villa Lighting",
-      description: "Custom lighting design and installation for a luxury villa.",
-      image: "/placeholder.svg?height=400&width=600&text=Lighting+Project",
+      title: "တန်ဖိုးကြီး အိမ်ယာများ နှင့်ဆိုလာ",
+      description: "တန်ဖိုးကြီး အိမ်ယာများတွင် စိတ်တိုင်းကျ လျှပ်စစ်သွယ်တန်းမှုများနှင့် ဆိုလာတပ်ဆင်ပေးခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/laxuy.png",
     },
     {
-      title: "Office Building Energy Solution",
-      description: "Energy-efficient electrical solutions for a modern office building.",
-      image: "/placeholder.svg?height=400&width=600&text=Office+Project",
+      title: "ရုံးသုံးလုပ်ငန်းများ အတွက် စွမ်းအင်",
+      description: "ရုံးသုံးလုပ်ငန်းများအတွက် စွမ်းအင်ချွေတာရန် ဆိုလာတပ်ဆင်ပေးခြင်း",
+      image: "https://aquawebtoon.com/wp-content/uploads/2025/03/office.png",
     },
   ]
 
@@ -89,7 +89,7 @@ export default function ProjectGallery() {
       </div>
       <div className="mt-10 text-center">
         <Button variant="outline" className="border-primary/20 hover:bg-primary/5">
-          View All Projects
+          ပိုမိုကြည့်ရှုရန်
         </Button>
       </div>
     </div>

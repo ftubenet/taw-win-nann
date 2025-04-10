@@ -38,30 +38,29 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium mb-6">
               <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
-              Professional Solar & Electronics Solutions
+              အရည်သွေးမြင့် ဆိုလာ နှင့် လျှပ်စစ် လုပ်ငန်း
             </div>
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl mb-6 leading-tight">
               Power Your Home With <span className="text-gradient-green">Green Energy</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-8">
-              Professional electronics and solar installation services for hotels, residential buildings, and private
-              homes.
+              ဟိုတယ်များ၊ လူနေအဆောက်အအုံများနှင့် ပုဂ္ဂလိကနေအိမ်များအတွက် ပရော်ဖက်ရှင်နယ် အီလက်ထရွန်းနစ်နှင့် ဆိုလာ တပ်ဆင်ရေး ဝန်ဆောင်မှု
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" asChild>
                 <Link href="#contact">
-                  Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
+                  အခမဲ့ ဆွေးနွေးရန် <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5" asChild>
-                <Link href="#services">Our Services</Link>
+                <Link href="#services">လုပ်ငန်းများ</Link>
               </Button>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
               {[
-                { icon: <Leaf className="h-6 w-6 text-primary" />, text: "Eco-Friendly" },
-                { icon: <Zap className="h-6 w-6 text-primary" />, text: "Energy Efficient" },
-                { icon: <Leaf className="h-6 w-6 text-primary" />, text: "Sustainable" },
+                { icon: <Leaf className="h-6 w-6 text-primary" />, text: "သဘာဝ" },
+                { icon: <Zap className="h-6 w-6 text-primary" />, text: "စွမ်းအင်" },
+                { icon: <Leaf className="h-6 w-6 text-primary" />, text: "ရေရှည်" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -86,7 +85,7 @@ export default function HeroSection() {
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl gradient-border">
               <img
-                src="/placeholder.svg?height=600&width=800&text=Solar+Installation"
+                src="https://aquawebtoon.com/wp-content/uploads/2025/03/solarinstall.png"
                 alt="Solar panel installation"
                 className="h-full w-full object-cover"
               />
@@ -121,7 +120,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Over</p>
-                  <p className="text-2xl font-bold text-gradient">500+</p>
+                  <p className="text-2xl font-bold text-gradient">50+</p>
                   <p className="text-xs text-muted-foreground">projects completed</p>
                 </div>
               </div>
@@ -134,7 +133,7 @@ export default function HeroSection() {
             href="#services"
             className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
           >
-            <span className="text-sm mb-2">Scroll Down</span>
+            <span className="text-sm mb-2">အောက်သို့ဆွဲရန်</span>
             <ChevronDown className="h-5 w-5" />
           </a>
         </div>
